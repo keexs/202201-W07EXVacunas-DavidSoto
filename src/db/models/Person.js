@@ -1,4 +1,4 @@
-const { Schema } = require("mongoose");
+const { Schema, model } = require("mongoose");
 
 const PersonModel = new Schema({
   DNI: {
@@ -16,3 +16,5 @@ const PersonModel = new Schema({
 });
 
 const Person = model("Person", PersonModel, "personas");
+
+module.exports = Person;
